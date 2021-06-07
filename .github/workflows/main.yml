@@ -2,7 +2,7 @@ name: GitHub Actions Text
 
 on:
   schedule:
-    - cron: "10 18 * * 1-5"
+    - cron: "*/5 18 * * 1-5"
 
 jobs:
   build:
