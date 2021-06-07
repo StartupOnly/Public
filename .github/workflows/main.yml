@@ -2,7 +2,7 @@ name: GitHub Actions Text
 
 on:
   schedule:
-    - cron: "30 11 * * 1-5"
+    - cron: "10 18 * * 1-5"
 
 jobs:
   build:
@@ -15,6 +15,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
+      - name: install mailjetAPI
+        run: pip install mailjet_rest
       - name: execute py script # run the run.py to get the latest data
         run: |
           python GitHubActionsTest.py
+      
